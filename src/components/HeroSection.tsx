@@ -8,23 +8,21 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
-          {/* Main Headline */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-foreground mb-6 leading-tight">
+          {/* Main Headline - Simplified */}
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-foreground mb-8 leading-tight">
             The First{" "}
             <span className="text-primary bg-gradient-primary bg-clip-text text-transparent animate-glow-pulse">
               RWA-Tokenized DePIN
             </span>{" "}
-            marketplace driving down costs for{" "}
+            marketplace for{" "}
             <span className="text-primary bg-gradient-primary bg-clip-text text-transparent">
               AI Developers
-            </span>{" "}
-            and creating new revenue for asset owners.
+            </span>
           </h1>
           
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-foreground-muted mb-12 max-w-3xl mx-auto leading-relaxed">
-            Revolutionizing the intersection of AI and decentralized infrastructure 
-            through innovative tokenization and marketplace dynamics.
+          {/* Subtitle - Simplified */}
+          <p className="text-xl md:text-2xl text-foreground-muted mb-12 max-w-2xl mx-auto leading-relaxed">
+            Driving down costs and creating new revenue streams through tokenized infrastructure.
           </p>
           
           {/* CTA Buttons */}

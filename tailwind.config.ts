@@ -81,10 +81,10 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(120 100% 60% / 0.2)'
+						boxShadow: '0 0 20px hsl(79 100% 72% / 0.2)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(120 100% 60% / 0.4)'
+						boxShadow: '0 0 40px hsl(79 100% 72% / 0.4)'
 					}
 				}
 			},
