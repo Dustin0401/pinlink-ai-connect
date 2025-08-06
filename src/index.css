@@ -16,11 +16,12 @@
     --foreground-muted: 0 0% 70%;
     --foreground-subtle: 0 0% 50%;
 
-    /* PinLink Green Accent System */
-    --primary: 150 100% 50%;
+    /* PinLink Electric Green System - Exact Match */
+    --primary: 120 100% 60%;
     --primary-foreground: 0 0% 3%;
-    --primary-glow: 150 100% 60%;
-    --primary-dim: 150 50% 25%;
+    --primary-glow: 120 100% 65%;
+    --primary-dim: 120 50% 30%;
+    --primary-electric: 120 100% 55%;
 
     /* Card System */
     --card: 0 0% 8%;
@@ -42,13 +43,13 @@
 
     --radius: 0.75rem;
 
-    /* PinLink Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(150 100% 50%), hsl(150 100% 60%));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(150 100% 50% / 0.3), transparent 70%);
+    /* PinLink Gradients - Updated Electric Green */
+    --gradient-primary: linear-gradient(135deg, hsl(120 100% 60%), hsl(120 100% 65%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(120 100% 60% / 0.3), transparent 70%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 8%), hsl(0 0% 6%));
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(150 100% 50% / 0.3);
+    /* Shadows - Updated Electric Green */
+    --shadow-glow: 0 0 40px hsl(120 100% 60% / 0.3);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
     --shadow-subtle: 0 2px 8px hsl(0 0% 0% / 0.2);
   }

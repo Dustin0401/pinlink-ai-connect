@@ -44,17 +44,64 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          {/* Hero Image/Graphic Placeholder */}
-          <div className="relative">
-            <div className="bg-card border border-card-border rounded-2xl p-8 shadow-card backdrop-blur-sm">
-              <div className="aspect-video bg-background-secondary rounded-xl flex items-center justify-center border border-card-border">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
-                    <span className="text-2xl font-bold text-primary-foreground">⚡</span>
+          {/* Hero Image/Dashboard Preview */}
+          <div className="relative mt-12">
+            <div className="bg-card border border-card-border rounded-2xl p-6 shadow-card backdrop-blur-sm max-w-4xl mx-auto">
+              {/* Dashboard Header */}
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-card-border">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <span className="text-primary-foreground font-bold">P</span>
                   </div>
-                  <p className="text-foreground-muted text-sm">
-                    DePIN Network Visualization
-                  </p>
+                  <span className="text-foreground font-semibold">PinLink Dashboard</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span className="text-foreground-muted text-sm">Live Network</span>
+                </div>
+              </div>
+              
+              {/* Dashboard Content */}
+              <div className="aspect-video bg-background-secondary rounded-xl border border-card-border p-6">
+                <div className="grid grid-cols-3 gap-6 h-full">
+                  {/* Network Stats */}
+                  <div className="space-y-4">
+                    <h4 className="text-foreground text-sm font-medium">Network Statistics</h4>
+                    <div className="space-y-3">
+                      <div className="bg-card rounded-lg p-3">
+                        <div className="text-primary text-xl font-bold">10,594</div>
+                        <div className="text-foreground-muted text-xs">Active Nodes</div>
+                      </div>
+                      <div className="bg-card rounded-lg p-3">
+                        <div className="text-primary text-xl font-bold">$2.4M</div>
+                        <div className="text-foreground-muted text-xs">TVL</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Visual Element */}
+                  <div className="flex items-center justify-center">
+                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center border-2 border-primary/20">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-glow animate-glow-pulse">
+                        <span className="text-primary-foreground font-bold">⚡</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Performance Metrics */}
+                  <div className="space-y-4">
+                    <h4 className="text-foreground text-sm font-medium">Performance</h4>
+                    <div className="space-y-3">
+                      <div className="bg-card rounded-lg p-3">
+                        <div className="text-primary text-xl font-bold">99.9%</div>
+                        <div className="text-foreground-muted text-xs">Uptime</div>
+                      </div>
+                      <div className="bg-card rounded-lg p-3">
+                        <div className="text-primary text-xl font-bold">42ms</div>
+                        <div className="text-foreground-muted text-xs">Latency</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

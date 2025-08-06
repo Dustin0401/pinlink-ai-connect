@@ -40,6 +40,7 @@ export default {
 					foreground: 'hsl(var(--primary-foreground))',
 					glow: 'hsl(var(--primary-glow))',
 					dim: 'hsl(var(--primary-dim))',
+					electric: 'hsl(var(--primary-electric))',
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -80,10 +81,10 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(150 100% 50% / 0.2)'
+						boxShadow: '0 0 20px hsl(120 100% 60% / 0.2)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(150 100% 50% / 0.4)'
+						boxShadow: '0 0 40px hsl(120 100% 60% / 0.4)'
 					}
 				}
 			},
