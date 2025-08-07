@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Main Headline - Simplified */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-foreground mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
             The First{" "}
             <span className="text-primary bg-gradient-primary bg-clip-text text-transparent animate-glow-pulse">
               RWA-Tokenized DePIN
