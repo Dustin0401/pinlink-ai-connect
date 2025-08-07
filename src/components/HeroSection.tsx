@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden pt-20">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-glow opacity-20"></div>
       
