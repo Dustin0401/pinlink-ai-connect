@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -9,41 +10,75 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Main Headline - Simplified */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight"
+          >
             The First{" "}
-            <span className="text-primary bg-gradient-primary bg-clip-text text-transparent animate-glow-pulse">
+            <motion.span 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-primary bg-gradient-primary bg-clip-text text-transparent animate-glow-pulse"
+            >
               RWA-Tokenized DePIN
-            </span>{" "}
+            </motion.span>{" "}
             marketplace for{" "}
-            <span className="text-primary bg-gradient-primary bg-clip-text text-transparent">
+            <motion.span 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="text-primary bg-gradient-primary bg-clip-text text-transparent"
+            >
               AI Developers
-            </span>
-          </h1>
+            </motion.span>
+          </motion.h1>
           
           {/* Subtitle - Simplified */}
-          <p className="text-xl md:text-2xl text-foreground-muted mb-12 max-w-2xl mx-auto leading-relaxed">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="text-xl md:text-2xl text-foreground-muted mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
             Driving down costs and creating new revenue streams through tokenized infrastructure.
-          </p>
+          </motion.p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary-glow transition-all shadow-glow px-8 py-6 text-lg font-semibold"
-            >
-              Start Building
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-card-border text-foreground hover:bg-card-hover px-8 py-6 text-lg font-semibold"
-            >
-              Learn More
-            </Button>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary-glow transition-all shadow-glow px-8 py-6 text-lg font-semibold"
+              >
+                Start Building
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-card-border text-foreground hover:bg-card-hover px-8 py-6 text-lg font-semibold"
+              >
+                Learn More
+              </Button>
+            </motion.div>
+          </motion.div>
           
           {/* Hero Image/Dashboard Preview */}
-          <div className="relative mt-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="relative mt-12"
+          >
             <div className="bg-card border border-card-border rounded-2xl p-6 shadow-card backdrop-blur-sm max-w-4xl mx-auto">
               {/* Dashboard Header */}
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-card-border">
@@ -103,7 +138,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

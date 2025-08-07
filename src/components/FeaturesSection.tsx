@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const FeaturesSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   const features = [
     {
       icon: "💰",
@@ -23,11 +29,17 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background-secondary">
+    <section ref={ref} className="py-24 bg-background-secondary">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-card border-card-border p-8 hover:bg-card-hover transition-all duration-300 group">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <Card className="bg-card border-card-border p-8 hover:bg-card-hover transition-all duration-300 group">
               <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
@@ -40,7 +52,8 @@ const FeaturesSection = () => {
               <p className="text-foreground-muted leading-relaxed">
                 {feature.description}
               </p>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
