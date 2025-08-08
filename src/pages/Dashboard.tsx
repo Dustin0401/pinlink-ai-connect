@@ -101,32 +101,412 @@ const Dashboard = () => {
         )}
 
         {activeTab === "MY_ASSETS" && (
-          <div className="text-center py-12">
-            <p className="text-gray-400">My Assets section coming soon...</p>
+          <div className="space-y-8">
+            {/* Assets Header */}
+            <div>
+              <div className="text-4xl font-bold mb-4">
+                <span className="text-primary">[0]</span> assets
+              </div>
+              <div className="flex items-center gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  <span>25% P&L</span>
+                </div>
+                <span className="text-gray-400">0 SPIN</span>
+              </div>
+            </div>
+
+            <Separator className="bg-gray-800" />
+
+            {/* Sub Navigation */}
+            <div className="flex items-center gap-8 border-b border-gray-800">
+              <button className="pb-4 border-b-2 border-primary text-primary text-sm uppercase tracking-wider">
+                MY DEVICES [0]
+              </button>
+              <button className="pb-4 border-b-2 border-transparent text-gray-400 text-sm uppercase tracking-wider hover:text-white">
+                MY LISTINGS [0]
+              </button>
+              <button className="pb-4 border-b-2 border-transparent text-gray-400 text-sm uppercase tracking-wider hover:text-white">
+                HISTORY [0]
+              </button>
+            </div>
+
+            {/* No Assets Content */}
+            <div className="flex flex-col items-center justify-center py-24 space-y-4">
+              <div className="w-16 h-16 border-2 border-dashed border-gray-600 rounded-lg flex items-center justify-center">
+                <span className="text-gray-600 text-2xl">✕</span>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold mb-2">No Assets</h3>
+                <button className="text-primary hover:underline">
+                  Explore Marketplace [+]
+                </button>
+              </div>
+            </div>
           </div>
         )}
 
         {activeTab === "MARKETPLACE" && (
-          <div className="text-center py-12">
-            <p className="text-gray-400">Marketplace section coming soon...</p>
+          <div className="space-y-8">
+            {/* Marketplace Header */}
+            <div className="flex items-start justify-between">
+              <div className="space-y-4">
+                <h2 className="text-4xl font-bold">
+                  Explore a Range of<br />Assets
+                </h2>
+                <p className="text-gray-400 max-w-md">
+                  From GPUs and nodes to storage and computing power, our marketplace offers a diverse array of DePIN assets for you to explore and rent.
+                </p>
+                <button className="text-primary hover:underline text-sm">
+                  [Learn more]
+                </button>
+              </div>
+              <div className="w-64 h-32 bg-gray-800 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500">Asset Image</span>
+              </div>
+            </div>
+
+            {/* Filters */}
+            <div className="flex items-center gap-4 text-sm">
+              <div className="flex items-center gap-2">
+                <span className="bg-gray-700 px-3 py-1 rounded">⚙ Miner: 85</span>
+                <span className="bg-gray-700 px-3 py-1 rounded">📱 Node: 1</span>
+                <span className="bg-primary text-black px-3 py-1 rounded">💰 USDC: 15</span>
+                <span className="bg-gray-700 px-3 py-1 rounded">🤖 AI Agents (coming soon)</span>
+              </div>
+              <div className="ml-auto flex items-center gap-4">
+                <span className="text-gray-400">Filter by token ID or address</span>
+                <div className="flex items-center gap-2">
+                  <span>⚙</span>
+                  <span>📊</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Marketplace Table */}
+            <div className="space-y-4">
+              <div className="grid grid-cols-7 gap-4 text-xs uppercase tracking-wider text-gray-400 pb-4 border-b border-gray-800">
+                <span>ITEM</span>
+                <span>PRICE</span>
+                <span>FRACTIONS</span>
+                <span>APR</span>
+                <span>CATEGORY</span>
+                <span>VENDOR</span>
+                <span>ACTIONS</span>
+              </div>
+              
+              {[
+                { name: "Avalon Q", price: "$17.49 USD", fractions: "81/100", apr: "0%", vendor: "CANAAN" },
+                { name: "Antminer S21 XP", price: "$2,142 USD", fractions: "983/1000", apr: "0%", vendor: "BITMAIN", warning: "⚠️ Warning: Up" },
+                { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN" },
+                { name: "Antminer S21 Pro", price: "$45.9 USD", fractions: "5/100", apr: "53.99%", vendor: "BITMAIN" },
+              ].map((item, index) => (
+                <div key={index} className="grid grid-cols-7 gap-4 items-center py-3 border-b border-gray-800 hover:bg-gray-900/50">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center">
+                      <span className="text-xs">⚙</span>
+                    </div>
+                    <div>
+                      <div className="font-mono">{item.name}</div>
+                      {item.warning && (
+                        <div className="text-xs text-yellow-500">{item.warning}</div>
+                      )}
+                    </div>
+                  </div>
+                  <span className="font-mono">{item.price}</span>
+                  <span className="font-mono">{item.fractions}</span>
+                  <span className="font-mono">{item.apr}</span>
+                  <span className="text-gray-400">Miner</span>
+                  <span className="text-gray-400">{item.vendor}</span>
+                  <button className="bg-primary text-black px-3 py-1 rounded text-xs hover:bg-primary/80">
+                    [BUY]
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
         {activeTab === "CATEGORIES" && (
-          <div className="text-center py-12">
-            <p className="text-gray-400">Categories section coming soon...</p>
+          <div className="space-y-8">
+            {/* Categories Header */}
+            <div>
+              <h2 className="text-4xl font-bold mb-4">
+                <span className="text-primary">[6]</span> categories are currently<br />
+                available for a total of <span className="text-primary">[217 assets]</span>
+              </h2>
+            </div>
+
+            {/* Categories Grid */}
+            <div className="grid grid-cols-2 gap-8">
+              <Card className="bg-gray-900 border-gray-800 p-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Miners</h3>
+                    <p className="text-primary text-sm">216 assets</p>
+                  </div>
+                  <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-4xl">⚙️</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800 p-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Nodes</h3>
+                    <p className="text-primary text-sm">1 assets</p>
+                  </div>
+                  <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-4xl">📱</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800 p-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">GPU</h3>
+                    <p className="text-gray-400 text-sm">Coming soon</p>
+                  </div>
+                  <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-4xl">🎮</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800 p-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">DePin Hardware</h3>
+                    <p className="text-gray-400 text-sm">Coming soon</p>
+                  </div>
+                  <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-4xl">🔧</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800 p-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">DeStorage</h3>
+                    <p className="text-gray-400 text-sm">Coming soon</p>
+                  </div>
+                  <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-4xl">💾</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800 p-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">AI Agents</h3>
+                    <p className="text-gray-400 text-sm">Coming soon</p>
+                  </div>
+                  <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-4xl">🤖</span>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
         )}
 
         {activeTab === "STAKE" && (
-          <div className="text-center py-12">
-            <p className="text-gray-400">Stake section coming soon...</p>
+          <div className="grid grid-cols-2 gap-12">
+            {/* Left Side - Staking Interface */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-4xl font-bold mb-4">Stake</h2>
+                <p className="text-gray-400">
+                  Participate in securing the PinLink Ecosystem, earn platform fees and staking rewards.
+                </p>
+              </div>
+
+              {/* Stake/Unstake Tabs */}
+              <div className="flex items-center gap-8 border-b border-gray-800">
+                <button className="pb-4 border-b-2 border-primary text-primary text-sm uppercase tracking-wider">
+                  STAKE
+                </button>
+                <button className="pb-4 border-b-2 border-transparent text-gray-400 text-sm uppercase tracking-wider hover:text-white">
+                  UNSTAKE
+                </button>
+                <button className="pb-4 border-b-2 border-transparent text-gray-400 text-sm uppercase tracking-wider hover:text-white">
+                  WITHDRAW
+                </button>
+              </div>
+
+              {/* Staking Form */}
+              <div className="space-y-6">
+                <div className="flex items-center justify-between bg-gray-900 p-4 rounded-lg">
+                  <div className="flex items-center gap-2">
+                    <span className="w-6 h-6 bg-primary rounded flex items-center justify-center">
+                      <span className="text-black text-xs">⚡</span>
+                    </span>
+                    <span>0</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm text-gray-400">SPIN MAX</div>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="text-sm text-gray-400">APY</div>
+                  <div className="text-2xl font-bold text-primary">24.65%</div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="text-sm text-gray-400">RECEIVED</div>
+                  <div className="text-lg font-bold">0 SPIN</div>
+                </div>
+
+                <Button className="w-full bg-primary text-black hover:bg-primary/80">
+                  APPROVE
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Side - Stats and Chart */}
+            <div className="space-y-8">
+              {/* SPIN Price */}
+              <div>
+                <div className="text-sm text-gray-400 mb-2">SPIN</div>
+                <div className="text-4xl font-bold text-primary mb-2">$ 0.76</div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  <span className="text-primary">0.7% TODAY</span>
+                </div>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">MARKET CAP</div>
+                  <div className="text-lg font-bold">76.06M</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">TVL</div>
+                  <div className="text-lg font-bold text-primary">28.63M</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">TOTAL STAKED</div>
+                  <div className="text-lg font-bold">20.28M</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">SUPPLY STAKED</div>
+                  <div className="text-lg font-bold">20.3%</div>
+                </div>
+              </div>
+
+              {/* Staking Status */}
+              <div className="grid grid-cols-3 gap-6">
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">STAKED</div>
+                  <div className="text-lg font-bold">0</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">LOCKED</div>
+                  <div className="text-lg font-bold">0</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">UNSTAKED</div>
+                  <div className="text-lg font-bold">0</div>
+                </div>
+              </div>
+
+              {/* Chart Area */}
+              <div className="bg-gray-900 p-6 rounded-lg">
+                <div className="text-sm text-gray-400 mb-4">TOTAL AMOUNT OF PIN STAKED OVER TIME</div>
+                <div className="h-48 bg-gradient-to-t from-primary/20 to-transparent rounded flex items-end">
+                  <div className="w-full h-32 bg-primary/40 rounded-b"></div>
+                </div>
+              </div>
+
+              {/* Staking Info */}
+              <div className="bg-gray-900 p-6 rounded-lg">
+                <h3 className="text-lg font-bold mb-2">STAKING</h3>
+                <p className="text-sm text-gray-400">
+                  By definition, staking is a crypto process that allows network participants to earn 
+                  rewards by locking their coins in wallets. These coins are then used to validate 
+                  network transactions or as a liquidity source. Staking is applied in networks based 
+                  on the Proof of Stake (PoS) consensus algorithm.
+                </p>
+              </div>
+            </div>
           </div>
         )}
 
         {activeTab === "CONTACT" && (
-          <div className="text-center py-12">
-            <p className="text-gray-400">Contact section coming soon...</p>
+          <div className="grid grid-cols-2 gap-12">
+            {/* Left Side - Contact Info */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-4xl font-bold mb-4">Contact</h2>
+                <p className="text-gray-400 mb-8">
+                  Ready to invest in RWA assets or questions about DePin? It starts here. Get in touch to start a conversation.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <p className="text-gray-400">
+                  If you're not a form person, feel free to send us an email directly at:
+                </p>
+                <a href="mailto:hello@pinlink.ai" className="text-primary hover:underline">
+                  hello@pinlink.ai
+                </a>
+              </div>
+            </div>
+
+            {/* Right Side - Contact Form */}
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">Name</label>
+                <input 
+                  type="text" 
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">X Account</label>
+                <input 
+                  type="text" 
+                  placeholder="@you"
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">Email</label>
+                <input 
+                  type="email" 
+                  placeholder="you@mail.co"
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">Description</label>
+                <textarea 
+                  placeholder="Tell us more..."
+                  rows={6}
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary resize-none"
+                />
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="flex-1">
+                  <div className="bg-gray-800 p-4 rounded-lg text-center">
+                    <span className="text-gray-400">reCAPTCHA placeholder</span>
+                  </div>
+                </div>
+                <Button className="bg-primary text-black hover:bg-primary/80 px-8">
+                  SEND
+                </Button>
+              </div>
+            </div>
           </div>
         )}
       </main>
