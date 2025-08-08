@@ -32,13 +32,13 @@ const Header = () => {
             </a>
           </nav>
           
-          {/* CTA Button */}
+          {/* Connect Wallet Button */}
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:inline-flex border-border text-foreground hover:bg-card-hover">
-              Login
-            </Button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary-glow transition-all">
-              Get Started
+            <Button 
+              onClick={() => window.location.href = '/dashboard'}
+              className="bg-primary text-primary-foreground hover:bg-primary-glow transition-all"
+            >
+              Connect Wallet
             </Button>
           </div>
         </div>
