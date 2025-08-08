@@ -88,12 +88,12 @@ const Dashboard = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8">
               {stats.map((stat, index) => (
-                <div key={index} className="space-y-6 p-8 border border-gray-800/50 rounded-lg bg-gray-900/30">
+                <div key={index} className="space-y-6">
                   <div className="flex items-center gap-2 text-gray-400 text-sm uppercase tracking-wider font-mono">
                     {stat.label}
                     <span className="text-xs opacity-50">{stat.icon}</span>
                   </div>
-                  <div className="text-4xl font-bold text-white">{stat.value}</div>
+                  <div className="text-2xl font-bold text-white">{stat.value}</div>
                 </div>
               ))}
             </div>
