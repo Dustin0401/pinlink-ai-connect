@@ -368,7 +368,7 @@ const Dashboard = () => {
 
               {/* Staking Form */}
               <div className="space-y-6">
-                <div className="flex items-center justify-between bg-gray-900 p-4 rounded-lg">
+                <div className="flex items-center justify-between bg-black p-4 rounded-lg border border-gray-800">
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 bg-primary rounded flex items-center justify-center">
                       <span className="text-black text-xs">⚡</span>
