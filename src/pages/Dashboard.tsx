@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("OVERVIEW");
@@ -21,6 +22,33 @@ const Dashboard = () => {
     { label: "TOTAL HASHRATE", value: "98,916,473 GH/s", icon: "?" },
     { label: "TOTAL FRACTIONS", value: "8,255", icon: "?" },
   ];
+
+  // Chart data for staking growth
+  const stakingData = [
+    { month: 'Jan', staked: 5.2, value: 5200000 },
+    { month: 'Feb', staked: 8.7, value: 8700000 },
+    { month: 'Mar', staked: 12.4, value: 12400000 },
+    { month: 'Apr', staked: 15.8, value: 15800000 },
+    { month: 'May', staked: 18.9, value: 18900000 },
+    { month: 'Jun', staked: 20.28, value: 20280000 },
+  ];
+
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-3 shadow-lg">
+          <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">{`${label}`}</p>
+          <p className="text-primary font-bold">
+            {`${payload[0].value.toFixed(2)}M PIN`}
+          </p>
+          <p className="text-xs text-gray-500">
+            {`$${(payload[0].payload.value * 0.76).toLocaleString()}`}
+          </p>
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className="min-h-screen bg-black text-white font-mono">
@@ -418,9 +446,41 @@ const Dashboard = () => {
 
               {/* Chart Area */}
               <div className="bg-black p-6 rounded-lg border border-gray-800">
-                <div className="text-sm text-gray-400 mb-4">TOTAL AMOUNT OF PIN STAKED OVER TIME</div>
-                <div className="h-48 bg-gradient-to-t from-primary/20 to-transparent rounded flex items-end">
-                  <div className="w-full h-32 bg-primary/40 rounded-b"></div>
+                <div className="text-sm text-gray-400 mb-4 uppercase tracking-wider">TOTAL AMOUNT OF PIN STAKED OVER TIME</div>
+                <div className="h-64">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={stakingData} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+                      <defs>
+                        <linearGradient id="stakingGradient" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.8}/>
+                          <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.1}/>
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.3} />
+                      <XAxis 
+                        dataKey="month" 
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{ fill: '#9CA3AF', fontSize: 12 }}
+                      />
+                      <YAxis 
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{ fill: '#9CA3AF', fontSize: 12 }}
+                        tickFormatter={(value) => `${value}M`}
+                      />
+                      <Tooltip content={<CustomTooltip />} />
+                      <Area
+                        type="monotone"
+                        dataKey="staked"
+                        stroke="hsl(var(--primary))"
+                        strokeWidth={2}
+                        fill="url(#stakingGradient)"
+                        dot={{ fill: "hsl(var(--primary))", strokeWidth: 2, r: 4 }}
+                        activeDot={{ r: 6, stroke: "hsl(var(--primary))", strokeWidth: 2, fill: "#000" }}
+                      />
+                    </AreaChart>
+                  </ResponsiveContainer>
                 </div>
               </div>
 
