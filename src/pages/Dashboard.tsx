@@ -439,7 +439,7 @@ const Dashboard = () => {
         )}
 
         {activeTab === "CONTACT" && (
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid grid-cols-[3fr_5fr] gap-12">
             {/* Left Side - Contact Info */}
             <div className="space-y-8">
               <div>
