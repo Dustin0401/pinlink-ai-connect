@@ -465,7 +465,7 @@ const Dashboard = () => {
                 <label className="block text-sm text-gray-400 mb-2">Name</label>
                 <input 
                   type="text" 
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
+                  className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -474,7 +474,7 @@ const Dashboard = () => {
                 <input 
                   type="text" 
                   placeholder="@you"
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
+                  className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -483,7 +483,7 @@ const Dashboard = () => {
                 <input 
                   type="email" 
                   placeholder="you@mail.co"
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
+                  className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -492,7 +492,7 @@ const Dashboard = () => {
                 <textarea 
                   placeholder="Tell us more..."
                   rows={6}
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary resize-none"
+                  className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary resize-none"
                 />
               </div>
 
