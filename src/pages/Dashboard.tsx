@@ -315,7 +315,7 @@ const Dashboard = () => {
         )}
 
         {activeTab === "STAKE" && (
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid grid-cols-[3fr_5fr] gap-12">
             {/* Left Side - Staking Interface */}
             <div className="space-y-8">
               <div>
