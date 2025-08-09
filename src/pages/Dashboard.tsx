@@ -69,12 +69,12 @@ const Dashboard = () => {
 
       {/* Navigation Bar */}
       <nav className="border-b border-gray-800">
-        <div className="flex items-center px-6">
+        <div className="flex items-center px-6 gap-2">
           {navigationItems.map((item) => (
             <button
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className={`flex items-center gap-2 px-4 py-4 text-sm transition-colors border-b-2 ${
+              className={`flex items-center gap-2 px-6 py-4 text-base font-medium transition-colors border-b-2 ${
                 activeTab === item.id
                   ? "border-primary text-primary"
                   : "border-transparent text-gray-400 hover:text-white"
