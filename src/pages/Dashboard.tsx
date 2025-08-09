@@ -417,7 +417,7 @@ const Dashboard = () => {
               </div>
 
               {/* Chart Area */}
-              <div className="bg-gray-900 p-6 rounded-lg">
+              <div className="bg-black p-6 rounded-lg border border-gray-800">
                 <div className="text-sm text-gray-400 mb-4">TOTAL AMOUNT OF PIN STAKED OVER TIME</div>
                 <div className="h-48 bg-gradient-to-t from-primary/20 to-transparent rounded flex items-end">
                   <div className="w-full h-32 bg-primary/40 rounded-b"></div>
@@ -425,7 +425,7 @@ const Dashboard = () => {
               </div>
 
               {/* Staking Info */}
-              <div className="bg-gray-900 p-6 rounded-lg">
+              <div className="bg-black p-6 rounded-lg border border-gray-800">
                 <h3 className="text-lg font-bold mb-2">STAKING</h3>
                 <p className="text-sm text-gray-400">
                   By definition, staking is a crypto process that allows network participants to earn 
