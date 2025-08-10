@@ -218,7 +218,14 @@ const Dashboard = () => {
                 >
                   ✅ Node: 1
                 </button>
-                <span className="bg-blue-600 text-blue-100 px-3 py-1 rounded">💰 USDC: 17</span>
+                <button 
+                  onClick={() => setMarketplaceFilter("USDC")}
+                  className={`px-3 py-1 rounded transition-colors ${
+                    marketplaceFilter === "USDC" ? "bg-primary text-black" : "bg-blue-600 text-blue-100 hover:bg-blue-500"
+                  }`}
+                >
+                  💰 USDC: 17
+                </button>
                 <span className="bg-gray-700 px-3 py-1 rounded">🤖 AI Agents (coming soon)</span>
               </div>
               <div className="flex items-center gap-4">
@@ -231,6 +238,66 @@ const Dashboard = () => {
             </div>
 
             {/* Content based on filter */}
+            {marketplaceFilter === "USDC" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-7 gap-4 text-xs uppercase tracking-wider text-gray-400 pb-4 border-b border-gray-800">
+                  <span>ITEM</span>
+                  <span>PRICE</span>
+                  <span>FRACTIONS</span>
+                  <span>APR</span>
+                  <span>CATEGORY</span>
+                  <span>VENDOR</span>
+                  <span>ACTIONS</span>
+                </div>
+                
+                {[
+                  { name: "Avalon Q", price: "$17.34 USD", fractions: "1/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "76/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Avalon Q", price: "$18.38 USD", fractions: "2/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Antminer S21 XP", price: "$2,142 USD", fractions: "993/1000", apr: "0%", vendor: "BITMAIN", category: "Miner", warning: "⚠️ Warning: Up" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Antminer S21 Pro", price: "$45.9 USD", fractions: "4/100", apr: "54.77%", vendor: "BITMAIN", category: "Miner" },
+                  { name: "Antminer S21 Pro", price: "$45.9 USD", fractions: "42/100", apr: "54.77%", vendor: "BITMAIN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Antminer S21 Pro", price: "$45.9 USD", fractions: "19/100", apr: "54.77%", vendor: "BITMAIN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "62/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Antminer S21 Pro", price: "$45.9 USD", fractions: "83/100", apr: "54.77%", vendor: "BITMAIN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "100/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Avalon Q", price: "$17.49 USD", fractions: "82/100", apr: "0%", vendor: "CANAAN", category: "Miner" },
+                  { name: "Antminer S21 Pro", price: "$45.9 USD", fractions: "74/100", apr: "54.77%", vendor: "BITMAIN", category: "Miner" },
+                ].map((item, index) => (
+                  <div key={index} className="grid grid-cols-7 gap-4 items-center py-3 border-b border-gray-800 hover:bg-gray-900/50">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center">
+                        <span className="text-xs">⚙</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="font-mono">{item.name}</div>
+                        <div className="flex gap-1">
+                          <span className="w-3 h-3 bg-blue-600 rounded-full"></span>
+                          <span className="w-3 h-3 bg-blue-400 rounded-full"></span>
+                        </div>
+                        {item.warning && (
+                          <div className="text-xs text-yellow-500">{item.warning}</div>
+                        )}
+                      </div>
+                    </div>
+                    <span className="font-mono">{item.price}</span>
+                    <span className="font-mono">{item.fractions}</span>
+                    <span className="font-mono">{item.apr}</span>
+                    <span className="text-gray-400">{item.category}</span>
+                    <span className="text-gray-400">{item.vendor}</span>
+                    <button className="bg-primary text-black px-3 py-1 rounded text-xs hover:bg-primary/80">
+                      [BUY]
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {marketplaceFilter === "MINERS" && (
               <div className="space-y-4">
                 <div className="grid grid-cols-7 gap-4 text-xs uppercase tracking-wider text-gray-400 pb-4 border-b border-gray-800">
