@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden pt-20">
+    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden pt-32">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-glow opacity-20"></div>
       
