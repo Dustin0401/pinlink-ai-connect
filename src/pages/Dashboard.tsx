@@ -435,74 +435,110 @@ const Dashboard = () => {
 
             {/* Categories Grid */}
             <div className="grid grid-cols-2 gap-8">
-              <Card className="bg-gray-900 border-gray-800 p-8">
+              <Card 
+                className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer"
+                onClick={() => {
+                  setActiveTab("MARKETPLACE");
+                  setMarketplaceFilter("MINERS");
+                }}
+              >
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Miners</h3>
                     <p className="text-primary text-sm">216 assets</p>
                   </div>
                   <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl">⚙️</span>
+                    <img 
+                      src="/lovable-uploads/25bce48f-a381-46aa-b4af-f05aed7373fc.png" 
+                      alt="Miners Category"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8">
+              <Card 
+                className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer"
+                onClick={() => {
+                  setActiveTab("MARKETPLACE");
+                  setMarketplaceFilter("NODES");
+                }}
+              >
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Nodes</h3>
                     <p className="text-primary text-sm">1 assets</p>
                   </div>
                   <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl">📱</span>
+                    <img 
+                      src="/lovable-uploads/0c578681-5e91-42a6-a1b2-e51c9afd9fb9.png" 
+                      alt="Nodes Category"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8">
+              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">GPU</h3>
                     <p className="text-gray-400 text-sm">Coming soon</p>
                   </div>
                   <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl">🎮</span>
+                    <img 
+                      src="/lovable-uploads/4cce5443-580d-4898-8c8f-073132dfee36.png" 
+                      alt="GPU Category"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8">
+              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">DePin Hardware</h3>
+                    <h3 className="text-2xl font-bold mb-2">Computing</h3>
                     <p className="text-gray-400 text-sm">Coming soon</p>
                   </div>
                   <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl">🔧</span>
+                    <img 
+                      src="/lovable-uploads/e51ef33a-e0c8-4fcc-acba-a87845cf7cc4.png" 
+                      alt="Computing Category"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8">
+              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">DeStorage</h3>
+                    <h3 className="text-2xl font-bold mb-2">Storage</h3>
                     <p className="text-gray-400 text-sm">Coming soon</p>
                   </div>
                   <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl">💾</span>
+                    <img 
+                      src="/lovable-uploads/7428a7fc-a8b9-4ce9-b916-e96d3065adac.png" 
+                      alt="Storage Category"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8">
+              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">AI Agents</h3>
+                    <h3 className="text-2xl font-bold mb-2">Network</h3>
                     <p className="text-gray-400 text-sm">Coming soon</p>
                   </div>
                   <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl">🤖</span>
+                    <img 
+                      src="/lovable-uploads/11ef7414-a6e3-43a9-a695-c0620cdb5fd9.png" 
+                      alt="Network Category"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                 </div>
               </Card>
