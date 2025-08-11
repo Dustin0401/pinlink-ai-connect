@@ -434,7 +434,7 @@ const Dashboard = () => {
             </div>
 
             {/* Categories Grid */}
-            <div className="grid grid-cols-2 gap-8 max-w-4xl">
+            <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto w-full">
               <Card 
                 className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-48 max-w-sm"
                 onClick={() => {
@@ -450,7 +450,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/25bce48f-a381-46aa-b4af-f05aed7373fc.png" 
                     alt="Miners Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-28 h-28 object-contain"
                   />
                 </div>
               </Card>
@@ -470,7 +470,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/0c578681-5e91-42a6-a1b2-e51c9afd9fb9.png" 
                     alt="Nodes Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-28 h-28 object-contain"
                   />
                 </div>
               </Card>
@@ -484,7 +484,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/4cce5443-580d-4898-8c8f-073132dfee36.png" 
                     alt="GPU Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-28 h-28 object-contain"
                   />
                 </div>
               </Card>
@@ -498,7 +498,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/e51ef33a-e0c8-4fcc-acba-a87845cf7cc4.png" 
                     alt="Computing Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-28 h-28 object-contain"
                   />
                 </div>
               </Card>
@@ -512,7 +512,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/7428a7fc-a8b9-4ce9-b916-e96d3065adac.png" 
                     alt="Storage Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-28 h-28 object-contain"
                   />
                 </div>
               </Card>
@@ -526,7 +526,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/11ef7414-a6e3-43a9-a695-c0620cdb5fd9.png" 
                     alt="Network Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-28 h-28 object-contain"
                   />
                 </div>
               </Card>
