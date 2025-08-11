@@ -436,7 +436,7 @@ const Dashboard = () => {
             {/* Categories Grid */}
             <div className="grid grid-cols-2 gap-8">
               <Card 
-                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-40"
+                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-32"
                 onClick={() => {
                   setActiveTab("MARKETPLACE");
                   setMarketplaceFilter("MINERS");
@@ -450,13 +450,13 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/25bce48f-a381-46aa-b4af-f05aed7373fc.png" 
                     alt="Miners Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </div>
               </Card>
 
               <Card 
-                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-40"
+                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-32"
                 onClick={() => {
                   setActiveTab("MARKETPLACE");
                   setMarketplaceFilter("NODES");
@@ -470,12 +470,12 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/0c578681-5e91-42a6-a1b2-e51c9afd9fb9.png" 
                     alt="Nodes Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-32">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">GPU</h3>
@@ -484,12 +484,12 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/4cce5443-580d-4898-8c8f-073132dfee36.png" 
                     alt="GPU Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-32">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Computing</h3>
@@ -498,12 +498,12 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/e51ef33a-e0c8-4fcc-acba-a87845cf7cc4.png" 
                     alt="Computing Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-32">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Storage</h3>
@@ -512,12 +512,12 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/7428a7fc-a8b9-4ce9-b916-e96d3065adac.png" 
                     alt="Storage Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-32">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Network</h3>
@@ -526,7 +526,7 @@ const Dashboard = () => {
                   <img 
                     src="/lovable-uploads/11ef7414-a6e3-43a9-a695-c0620cdb5fd9.png" 
                     alt="Network Category"
-                    className="w-20 h-20 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </div>
               </Card>
