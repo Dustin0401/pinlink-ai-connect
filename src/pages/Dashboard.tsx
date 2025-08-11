@@ -434,9 +434,9 @@ const Dashboard = () => {
             </div>
 
             {/* Categories Grid */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 max-w-4xl">
               <Card 
-                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-40"
+                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-48 max-w-sm"
                 onClick={() => {
                   setActiveTab("MARKETPLACE");
                   setMarketplaceFilter("MINERS");
@@ -456,7 +456,7 @@ const Dashboard = () => {
               </Card>
 
               <Card 
-                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-40"
+                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer h-48 max-w-sm"
                 onClick={() => {
                   setActiveTab("MARKETPLACE");
                   setMarketplaceFilter("NODES");
@@ -475,7 +475,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-48 max-w-sm">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">GPU</h3>
@@ -489,7 +489,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-48 max-w-sm">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Computing</h3>
@@ -503,7 +503,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-48 max-w-sm">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Storage</h3>
@@ -517,7 +517,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-40">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors h-48 max-w-sm">
                 <div className="flex items-center justify-between h-full">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Network</h3>
