@@ -436,7 +436,7 @@ const Dashboard = () => {
             {/* Categories Grid */}
             <div className="grid grid-cols-2 gap-8">
               <Card 
-                className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer"
+                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer"
                 onClick={() => {
                   setActiveTab("MARKETPLACE");
                   setMarketplaceFilter("MINERS");
@@ -458,7 +458,7 @@ const Dashboard = () => {
               </Card>
 
               <Card 
-                className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer"
+                className="bg-black border-gray-800 p-8 hover:border-primary transition-colors cursor-pointer"
                 onClick={() => {
                   setActiveTab("MARKETPLACE");
                   setMarketplaceFilter("NODES");
@@ -479,7 +479,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">GPU</h3>
@@ -495,7 +495,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Computing</h3>
@@ -511,7 +511,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Storage</h3>
@@ -527,7 +527,7 @@ const Dashboard = () => {
                 </div>
               </Card>
 
-              <Card className="bg-gray-900 border-gray-800 p-8 hover:border-primary transition-colors">
+              <Card className="bg-black border-gray-800 p-8 hover:border-primary transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Network</h3>
